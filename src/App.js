@@ -78,7 +78,7 @@ onInputChange = (event) => {
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
-      fetch('https://facerecognitioneye.herokuapp.com/imageurl', {
+      fetch('https://intense-cove-63798.herokuapp.com/imageurl', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -88,7 +88,7 @@ onInputChange = (event) => {
       .then(response => response.json())
       .then(response => {
         if (response) {
-          fetch('https://facerecognitioneye.herokuapp.com/image', {
+          fetch('https://intense-cove-63798.herokuapp.com/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
